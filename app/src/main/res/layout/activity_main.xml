@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/activity"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/activity"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/broadCastReceiver"/>
+
+    <Button
+        android:id="@+id/broadCastReceiver"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/broad_cast_receiver"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity"
+        app:layout_constraintBottom_toTopOf="@id/contentProvider"/>
+    <Button
+        android:id="@+id/contentProvider"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/content_provider"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentProvider"
+        app:layout_constraintBottom_toTopOf="@id/services"/>
+    <Button
+        android:id="@+id/services"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/services"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentProvider"
+        app:layout_constraintBottom_toTopOf="@id/intent"/>
+    <Button
+        android:id="@+id/intent"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/intent"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/services"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+<!--    <Button-->
+<!--        android:id="@+id/activity"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:text="Activity"-->
+<!--        android:layout_margin="15dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

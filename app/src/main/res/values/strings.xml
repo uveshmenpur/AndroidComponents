@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android Components</string>
+    <string name="activity">Activity</string>
+    <string name="broad_cast_receiver">Broad Cast Receiver</string>
+    <string name="content_provider">Content Provider</string>
+    <string name="services">Services</string>
+    <string name="intent">Intent</string>
+</resources>
