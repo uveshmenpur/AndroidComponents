@@ -5,4 +5,6 @@
     <string name="content_provider">Content Provider</string>
     <string name="services">Services</string>
     <string name="intent">Intent</string>
+    <string name="check_the_logs_to_understand_the_activity_lifecycle">Check the logs to understand the activity lifecycle.</string>
+    <string name="empty_string" />
 </resources>
