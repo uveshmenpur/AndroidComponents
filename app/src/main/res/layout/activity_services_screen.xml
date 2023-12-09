@@ -7,16 +7,44 @@
     tools:context=".ServicesScreen">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/startIntentService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:flow_wrapMode="chain"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:text="@string/empty_string"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/start_intent_service"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/stopIntentService"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopIntentService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_intent_service"
+        app:layout_constraintBottom_toBottomOf="@+id/startIntentService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startIntentService"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="136dp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/stopIntentService"
+        app:layout_constraintStart_toStartOf="@+id/startIntentService" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

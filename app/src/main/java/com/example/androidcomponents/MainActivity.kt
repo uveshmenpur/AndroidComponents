@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnServices.setOnClickListener {
-            val intent = Intent(this,BroadCastReceiverScreen::class.java)
+            val intent = Intent(this,ServicesScreen::class.java)
             startActivity(intent)
         }
         btnContentProvider.setOnClickListener {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         broadCastReceiver.setOnClickListener {
-            val intent = Intent(this,ServicesScreen::class.java)
+            val intent = Intent(this,BroadCastReceiverScreen::class.java)
             startActivity(intent)
         }
         intentButton.setOnClickListener {

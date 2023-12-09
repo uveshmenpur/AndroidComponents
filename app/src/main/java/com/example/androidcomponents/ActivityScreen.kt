@@ -1,19 +1,17 @@
 package com.example.androidcomponents
 
-import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 
 class ActivityScreen : AppCompatActivity() {
 
     // 1. onCreate: Called when the activity is first created.
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_screen)
 
         /// We can connect our Views with Objects using findViewById function and entering the ID of our Views
         val textView: TextView = findViewById(R.id.textView)

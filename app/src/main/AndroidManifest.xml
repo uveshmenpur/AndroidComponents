@@ -25,7 +25,7 @@
             android:name=".ServicesScreen"
             android:exported="false" />
         <activity
-            android:name=".activityScreen"
+            android:name=".ActivityScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
