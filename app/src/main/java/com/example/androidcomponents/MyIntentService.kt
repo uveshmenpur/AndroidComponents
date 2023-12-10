@@ -8,17 +8,18 @@ object MyIntentService : IntentService("MyIntentService") {
 
     /// To check if the service is running or not
     var isRunning = false
+    val MY_TAG = "MyServiceLogTag"
 
     /// To Stop this service
     fun stopService(){
         isRunning = true
-        Log.d("MyIntentService","Stopped Running")
+        Log.d(MY_TAG,"Stopped Running")
         this.stopSelf()
     }
 
     @Deprecated("Deprecated in Java")
     override fun onHandleIntent(p0: Intent?) {
-        Log.d("MyIntentService","Intent Service is Running");
+        Log.d(MY_TAG,"Intent Service is Running");
         try {
 
             isRunning =  true
@@ -26,7 +27,7 @@ object MyIntentService : IntentService("MyIntentService") {
                 Thread.sleep(1000)
             }
         }catch (err:Error){
-            Log.d("MyIntentService",err.toString() + err.message)
+            Log.d(MY_TAG,err.toString() + err.message)
         }
     }
 }

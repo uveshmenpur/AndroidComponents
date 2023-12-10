@@ -46,5 +46,34 @@
         app:layout_constraintEnd_toEndOf="@+id/stopIntentService"
         app:layout_constraintStart_toStartOf="@+id/startIntentService" />
 
+    <Button
+        android:id="@+id/startService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_my_service"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/startIntentService"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="@+id/startIntentService"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <Button
+        android:id="@+id/stopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_my_service"
+        app:layout_constraintBottom_toBottomOf="@+id/startService"
+        app:layout_constraintEnd_toEndOf="@+id/stopIntentService"
+        app:layout_constraintStart_toEndOf="@+id/startIntentService"
+        app:layout_constraintTop_toTopOf="@+id/startService" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="289dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
