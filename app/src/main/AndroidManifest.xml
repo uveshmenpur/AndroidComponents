@@ -2,11 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!--
+ We need to add this block to allow our application
+        to search for all the application that can search for
+        this type of Intent
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -18,6 +30,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidComponents"
         tools:targetApi="31">
+        <receiver
+            android:name=".AirplaneModeReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+        <!-- Activities Registered in our Manifest File -->
         <activity
             android:name=".IntentScreen"
             android:exported="false" />
@@ -41,9 +58,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <service android:name=".MyService"/>
-        <service android:name=".MyIntentService"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity> <!-- Services Registered in our Manifest File -->
+        <service android:name=".MyService" />
+        <service android:name=".MyIntentService" />
     </application>
 
 </manifest>

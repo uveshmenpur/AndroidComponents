@@ -14,4 +14,6 @@
     <string name="stop_intent_service">Stop Intent Service</string>
     <string name="stop_my_service">Stop Service</string>
     <string name="start_my_service">Start Service</string>
+    <string name="intent_filter_image">Intent Filter Image</string>
+    <string name="this_image_is_displayed_using_intent_filter">This image is displayed using intent filter</string>
 </resources>
