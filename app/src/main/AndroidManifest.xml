@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <!--
- We need to add this block to allow our application
+        We need to add this block to allow our application
         to search for all the application that can search for
         this type of Intent
     -->
