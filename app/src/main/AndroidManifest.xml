@@ -30,11 +30,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidComponents"
         tools:targetApi="31">
+        <service
+            android:name=".RunningService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <receiver
             android:name=".AirplaneModeReceiver"
             android:enabled="true"
-            android:exported="true"/>
-        <!-- Activities Registered in our Manifest File -->
+            android:exported="true" /> <!-- Activities Registered in our Manifest File -->
         <activity
             android:name=".IntentScreen"
             android:exported="false" />
